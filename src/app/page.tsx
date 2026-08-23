@@ -1,3 +1,5 @@
+import { Scene } from './scene'
+
 export default function Home() {
-  return <div>Home Page</div>
+  return <Scene />
 }
