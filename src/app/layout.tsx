@@ -10,7 +10,7 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html lang='en'>
       <body suppressHydrationWarning>
-        <main className='relative h-screen bg-black'>{children}</main>
+        <main className='relative h-screen'>{children}</main>
       </body>
     </html>
   )

@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+html {
+  @apply bg-black;
+}
+
 canvas {
   @apply cursor-grab active:cursor-grabbing;
 }
