@@ -32,7 +32,7 @@ interface GLTFResult extends GLTF {
 
 useGLTF.setDecoderPath('/draco/')
 
-const path = '/models/cute-home-robot.glb'
+const path = '/models/robot.glb'
 
 export function RobotModel(props: JSX.IntrinsicElements['group']) {
   const group = useRef<THREE.Group>(null!)

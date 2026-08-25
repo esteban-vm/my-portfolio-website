@@ -17,7 +17,7 @@ interface GLTFResult extends GLTF {
 
 useGLTF.setDecoderPath('/draco/')
 
-const path = '/models/cyberpunk-ghetto-delorean.glb'
+const path = '/models/car.glb'
 
 export function CarModel(props: JSX.IntrinsicElements['group']) {
   const modelRef = useRef<THREE.Group>(null!)

@@ -19,7 +19,7 @@ interface GLTFResult extends GLTF {
 
 useGLTF.setDecoderPath('/draco/')
 
-const path = '/models/cyberpunk-city.glb'
+const path = '/models/city.glb'
 
 export function CityModel(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF(path) as unknown as GLTFResult
