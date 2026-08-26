@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import * as fonts from '@/lib/fonts'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -8,7 +9,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<'/'>) {
   return (
-    <html lang='en'>
+    <html
+      className={`${fonts.balsamiq.variable} ${fonts.montserrat.variable} ${fonts.neon.variable} ${fonts.saiba45.variable} antialiased`}
+      dir='ltr'
+      lang='es'
+    >
       <body suppressHydrationWarning>
         <main className='relative h-screen'>{children}</main>
       </body>
