@@ -1,6 +1,13 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@theme inline {
+  --font-balsamiq: var(--font-balsamiq-variable);
+  --font-montserrat: var(--font-montserrat-alternates);
+  --font-neon: var(--font-neon-alternates);
+  --font-saiba45: var(--font-saiba45-alternates);
+}
+
 html {
   @apply bg-black;
 }
