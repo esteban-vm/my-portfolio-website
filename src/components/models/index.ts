@@ -1,3 +1,6 @@
 export * from './car'
 export * from './city'
+export * from './phoenix'
+export * from './plane'
 export * from './robot'
+export * from './skybox'
