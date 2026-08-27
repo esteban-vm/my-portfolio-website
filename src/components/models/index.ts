@@ -1,3 +1,3 @@
-export * from './car'
-export * from './city'
-export * from './robot'
+export * from './car.model'
+export * from './city.model'
+export * from './robot.model'
