@@ -277,10 +277,6 @@ canvas {
     8px 4px 30px var(--color-neon-green-light);
 }
 
-.nav-height-sm {
-  height: calc(89vh - --spacing(4));
-}
-
-.nav-height-md {
-  height: calc(88vh - --spacing(4));
+.app-nav {
+  @apply h-[calc(89vh-(--spacing(4)))] md:h-[calc(88vh-(--spacing(4)))];
 }
