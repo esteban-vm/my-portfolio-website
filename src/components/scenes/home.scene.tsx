@@ -4,7 +4,7 @@ import { OrbitControls, PerspectiveCamera, Stars, Stats } from '@react-three/dre
 import { Canvas } from '@react-three/fiber'
 import { lazy, Suspense } from 'react'
 import { useMediaQuery } from 'react-responsive'
-import { ModelLoader } from '@/components/common'
+import { ModelLoader } from '../common'
 
 const City = lazy(() => import('../models').then((mod) => ({ default: mod.CityModel })))
 const Car = lazy(() => import('../models').then((mod) => ({ default: mod.CarModel })))
