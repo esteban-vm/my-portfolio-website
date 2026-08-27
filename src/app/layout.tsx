@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next'
+import { Navigation } from '@/components/navigation'
 import * as fonts from '@/lib/fonts'
 import './globals.css'
 
@@ -29,7 +30,10 @@ export default function RootLayout({ children }: Props) {
       suppressHydrationWarning
     >
       <body>
-        <main className='relative h-screen'>{children}</main>
+        <main className='relative h-screen'>
+          <Navigation />
+          {children}
+        </main>
       </body>
     </html>
   )
