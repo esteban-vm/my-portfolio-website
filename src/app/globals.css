@@ -270,3 +270,17 @@ section {
 canvas {
   @apply cursor-grab active:cursor-grabbing;
 }
+
+.logo-shadow {
+  text-shadow:
+    4px 2px 0px var(--color-neon-green-dark),
+    8px 4px 30px var(--color-neon-green-light);
+}
+
+.nav-height-sm {
+  height: calc(89vh - --spacing(4));
+}
+
+.nav-height-md {
+  height: calc(88vh - --spacing(4));
+}
