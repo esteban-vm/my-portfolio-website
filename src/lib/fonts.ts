@@ -1,7 +1,7 @@
 import localFont from 'next/font/local'
 
 export const balsamiq = localFont({
-  variable: '--font-balsamiq',
+  variable: '--balsamiq',
   display: 'swap',
   fallback: ['sans-serif'],
   src: [
@@ -12,7 +12,7 @@ export const balsamiq = localFont({
 })
 
 export const montserrat = localFont({
-  variable: '--font-montserrat',
+  variable: '--montserrat',
   display: 'swap',
   fallback: ['sans-serif'],
   src: [
@@ -22,14 +22,14 @@ export const montserrat = localFont({
 })
 
 export const saiba45 = localFont({
-  variable: '--font-saiba45',
+  variable: '--saiba45',
   display: 'swap',
   fallback: ['cursive'],
   src: '../../public/fonts/SAIBA-45.woff2',
 })
 
 export const neon = localFont({
-  variable: '--font-neon',
+  variable: '--neon',
   display: 'swap',
   fallback: ['sans-serif'],
   src: '../../public/fonts/Neon.woff2',
