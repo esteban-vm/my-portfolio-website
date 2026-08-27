@@ -57,6 +57,9 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
+      fluid-tailwindcss:
+        specifier: ^1.1.7
+        version: 1.1.7(tailwindcss@4.3.3)
       tailwind-merge:
         specifier: ^3.6.0
         version: 3.6.0
@@ -639,6 +642,11 @@ packages:
 
   fflate@0.8.3:
     resolution: {integrity: sha512-tbZNuJrLwGUp3zshBtdy4W+ORxZuIh8a5ilyIEQDC5rY1f3U20JMry0Ll3WBzU58EZKsEuJFXhb5gwv8CsPvgA==}
+
+  fluid-tailwindcss@1.1.7:
+    resolution: {integrity: sha512-aSsF2IvZ9Jhqbz0S0JTpPZNixSZ8CLQMbPAWpQzJcVEOwPqQAdNdwlUbtoUo1hAhHFzwFbJu255ZNKwXO1UaSA==}
+    peerDependencies:
+      tailwindcss: ^4.0.0
 
   glsl-noise@0.0.0:
     resolution: {integrity: sha512-b/ZCF6amfAUb7dJM/MxRs7AetQEahYzJ8PtgfrmEdtw6uyGOr+ZSGtgjFm6mfsBkxJ4d2W7kg+Nlqzqvn3Bc0w==}
@@ -1477,6 +1485,10 @@ snapshots:
   fflate@0.6.11: {}
 
   fflate@0.8.3: {}
+
+  fluid-tailwindcss@1.1.7(tailwindcss@4.3.3):
+    dependencies:
+      tailwindcss: 4.3.3
 
   glsl-noise@0.0.0: {}
 

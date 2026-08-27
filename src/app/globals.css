@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@plugin "fluid-tailwindcss";
 
 @theme inline {
   --font-balsamiq: var(--balsamiq);
