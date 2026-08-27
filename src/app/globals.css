@@ -1,11 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@theme {
-  --font-balsamiq: var(--font-balsamiq-variable);
-  --font-montserrat: var(--font-montserrat-alternates);
-  --font-neon: var(--font-neon-alternates);
-  --font-saiba45: var(--font-saiba45-alternates);
+@theme inline {
+  --font-balsamiq: var(--balsamiq);
+  --font-montserrat: var(--montserrat);
+  --font-neon: var(--neon);
+  --font-saiba45: var(--saiba45);
 
   --color-neon-green-lighter: oklch(82.77% 0.057 165.9);
   --color-neon-green-light: oklch(90% 0.157 185.73);
@@ -238,7 +238,7 @@
 }
 
 * {
-  @apply font-balsamiq selection:bg-neon-magenta-dark selection:text-neon-magenta-light;
+  @apply selection:bg-neon-magenta-dark selection:text-neon-magenta-light;
 }
 
 html {
