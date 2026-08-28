@@ -1,15 +1,15 @@
 import tw from 'tailwind-styled-components'
-import { Link } from '@/i18n/navigation'
+import { TypedLink } from '../common'
 
 export function HomeLink() {
   return (
     <h1>
-      <Link href='/' passHref>
+      <TypedLink href='/' passHref>
         <NameLogo>
           Esteban
           <LastName>&nbsp;V.M.</LastName>
         </NameLogo>
-      </Link>
+      </TypedLink>
     </h1>
   )
 }
