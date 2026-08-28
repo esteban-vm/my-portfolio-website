@@ -1,3 +1,8 @@
 export default function AboutPage() {
-  return <div>Contact Page</div>
+  return (
+    <section>
+      <h2>About</h2>
+      <h3>Coming Soon</h3>
+    </section>
+  )
 }
