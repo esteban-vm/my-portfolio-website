@@ -10,9 +10,11 @@ export function MobileButton() {
 
   return (
     <Wrapper onClick={() => setNavbarOpen(!navbarOpen)}>
-      {navbarOpen ? <XIcon aria-label='Cerrar Menú' /> : <MenuIcon aria-label='Desplegar Menú' />}
+      {navbarOpen ? <Icon $as={XIcon} aria-label='Cerrar Menú' /> : <Icon $as={MenuIcon} aria-label='Desplegar Menú' />}
     </Wrapper>
   )
 }
 
-const Wrapper = tw.button`pointer-events-auto flex cursor-pointer items-center justify-center text-neon-yellow lg:hidden [&>svg]:size-8 active:[&>svg]:scale-90 [&>svg]:md:size-10`
+const Wrapper = tw.button`pointer-events-auto flex cursor-pointer items-center justify-center text-neon-yellow lg:hidden`
+
+const Icon = tw.svg`size-8 active:scale-90 md:size-10`
