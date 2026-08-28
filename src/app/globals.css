@@ -278,6 +278,6 @@ canvas {
     8px 4px 30px var(--color-neon-green-light);
 }
 
-.app-nav {
+.nav-links {
   @apply h-[calc(89vh-(--spacing(4)))] md:h-[calc(88vh-(--spacing(4)))];
 }
