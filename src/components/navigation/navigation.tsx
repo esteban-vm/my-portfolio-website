@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import tw from 'tailwind-styled-components'
+import { MobileButton } from './mobile-button'
+import { NavLinks } from './nav-links'
 
 export function Navigation() {
   return (
@@ -13,6 +15,8 @@ export function Navigation() {
             </NameLogo>
           </Link>
         </h1>
+        <MobileButton />
+        <NavLinks />
       </InnerWrapper>
     </Wrapper>
   )
@@ -22,6 +26,6 @@ const Wrapper = tw.header`container pointer-events-none absolute top-3 left-1/2 
 
 const InnerWrapper = tw.div`relative flex size-full items-center justify-around`
 
-const NameLogo = tw.span`logo-shadow pointer-events-auto animate-glitch text-wrap text-center font-saiba45 text-4xl text-neon-yellow hover:animate-none`
+const NameLogo = tw.span`logo-shadow fl-text-4xl/7xl pointer-events-auto text-wrap text-center font-saiba45 text-neon-yellow hover:animate-none motion-safe:animate-glitch`
 
 const LastName = tw.span`hidden font-saiba45 md:inline`
