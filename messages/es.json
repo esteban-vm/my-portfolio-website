@@ -10,6 +10,15 @@
       "2": "Diseño Web",
       "3": "Next.js",
       "4": "React"
+    },
+    "AboutPage": {
+      "title": "Sobre mí"
+    },
+    "ContactPage": {
+      "title": "Contacto"
+    },
+    "ProjectsPage": {
+      "title": "Proyectos"
     }
   }
 }
