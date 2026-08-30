@@ -9,7 +9,7 @@ import '@/app/globals.css'
 export type Props = LayoutProps<'/[locale]'>
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('Metadata')
+  const t = await getTranslations('HomePage')
 
   return {
     title: {
