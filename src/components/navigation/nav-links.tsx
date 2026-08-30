@@ -29,4 +29,4 @@ export function NavLinks() {
 
 const Wrapper = tw.nav`nav-links slide-out-to-top absolute top-[-500%] flex w-[95%] animate-out flex-col items-center justify-around text-nowrap bg-black/70 fill-mode-forwards text-center duration-700 lg:static lg:size-auto lg:animate-none lg:flex-row lg:gap-8 lg:bg-transparent`
 
-const NavLink = tw.span`fl-text-sm/base pointer-events-auto relative inline-block font-bold font-neon text-neon-yellow uppercase after:bottom-0 after:left-0 after:h-1 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neon-yellow after:transition-transform after:duration-200 after:ease-out after:content-[''] hover:opacity-90 hover:after:origin-bottom-left hover:after:scale-x-100 active:scale-95 lg:after:absolute`
+const NavLink = tw.span`fl-text-sm/base nav-link pointer-events-auto relative inline-block font-bold font-neon text-neon-yellow uppercase hover:opacity-90 hover:after:origin-bottom-left hover:after:scale-x-100 active:scale-95 lg:after:absolute`

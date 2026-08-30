@@ -272,12 +272,18 @@ canvas {
   @apply cursor-grab active:cursor-grabbing;
 }
 
-.logo-shadow {
-  text-shadow:
-    4px 2px 0px var(--color-neon-green-dark),
-    8px 4px 30px var(--color-neon-green-light);
-}
+@layer base {
+  .logo-shadow {
+    text-shadow:
+      4px 2px 0px var(--color-neon-green-dark),
+      8px 4px 30px var(--color-neon-green-light);
+  }
 
-.nav-links {
-  @apply h-[calc(89vh-(--spacing(4)))] md:h-[calc(88vh-(--spacing(4)))];
+  .nav-links {
+    @apply h-[calc(89vh-(--spacing(4)))] md:h-[calc(88vh-(--spacing(4)))];
+  }
+
+  .nav-link::after {
+    @apply bottom-0 left-0 h-1 w-full origin-bottom-right scale-x-0 bg-neon-yellow transition-transform duration-200 ease-out content-[''];
+  }
 }
