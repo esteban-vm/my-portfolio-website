@@ -11,7 +11,11 @@ export function Navbar() {
   const navbarOpen = useUIStore((s) => s.navbarOpen)
 
   return (
-    <Wrapper className={cn(navbarOpen && 'slide-in-from-top top-[91vh] animate-in')}>
+    <Wrapper
+      className={cn({
+        'slide-in-from-top top-[calc(100vh-var(--header-height)+(--spacing(2)))] animate-in': navbarOpen,
+      })}
+    >
       <NavLink href='/about' text={t('AboutPage.title')} />
       <NavLink href='/projects' text={t('ProjectsPage.title')} />
       <NavLink href='/contact' text={t('ContactPage.title')} />

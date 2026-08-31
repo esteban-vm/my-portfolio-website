@@ -20,5 +20,4 @@ export function HomeLink() {
 }
 
 const NameLogo = tw.span`logo-shadow fl-text-4xl/7xl pointer-events-auto text-wrap text-center font-saiba45 text-neon-yellow hover:animate-none motion-safe:animate-glitch`
-
 const LastName = tw.span`hidden font-saiba45 md:inline`
