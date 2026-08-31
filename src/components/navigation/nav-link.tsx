@@ -17,11 +17,8 @@ export function NavLink({ text, href }: NavLinkProps) {
   const setNavbarOpen = useUIStore((s) => s.setNavbarOpen)
 
   return (
-    <TypedLink href={href} passHref>
-      <Wrapper
-        className={cn(pathname.includes(href) && 'text-neon-green-dark! after:bg-neon-green-dark!')}
-        onClick={() => setNavbarOpen(false)}
-      >
+    <TypedLink href={href} onNavigate={() => setNavbarOpen(false)} passHref>
+      <Wrapper className={cn(pathname.includes(href) && 'text-neon-green-dark! after:bg-neon-green-dark!')}>
         {text}
       </Wrapper>
     </TypedLink>
