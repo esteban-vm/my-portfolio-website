@@ -1,0 +1,73 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "./animations.css";
+
+@plugin "fluid-tailwindcss";
+
+@layer base {
+  @theme {
+    --font-balsamiq: var(--balsamiq);
+    --font-montserrat: var(--montserrat);
+    --font-neon: var(--neon);
+    --font-saiba45: var(--saiba45);
+
+    --color-neon-green-lighter: oklch(82.77% 0.057 165.9);
+    --color-neon-green-light: oklch(90% 0.157 185.73);
+    --color-neon-green-dark: oklch(81.08% 0.14993954443651095 177.3694855517465);
+    --color-neon-green-darker: oklch(72.41% 0.166 157.77);
+    --color-neon-magenta-light: oklch(67.09% 0.279 344.72);
+    --color-neon-magenta-dark: oklch(27% 0.032 341.91);
+    --color-neon-yellow: oklch(92.9% 0.22 120.98);
+
+    --animate-blink: blink 5s infinite linear;
+    --animate-glitch: glitch 10s step-end infinite;
+
+    --header-height: 11vh;
+  }
+
+  * {
+    @apply selection:bg-neon-magenta-dark selection:text-neon-magenta-light;
+  }
+
+  html {
+    @apply bg-black font-balsamiq;
+  }
+
+  a,
+  button {
+    @apply select-none;
+  }
+
+  section {
+    @apply size-full text-center text-white;
+
+    h2 {
+      @apply text-neon-green-light;
+    }
+
+    h3 {
+      @apply mt-4 text-neon-green-lighter;
+    }
+  }
+
+  canvas {
+    @apply cursor-grab active:cursor-grabbing;
+  }
+
+  .logo-shadow {
+    text-shadow:
+      4px 2px 0px var(--color-neon-green-dark),
+      8px 4px 30px var(--color-neon-green-light);
+  }
+
+  /* biome-ignore assist/source/useSortedProperties: <> */
+  .navbar {
+    @apply h-[calc(80vh-(--spacing(4)))] border-4 border-solid rounded-b-lg border-transparent lg:border-none lg:rounded-none;
+    border-image: linear-gradient(to bottom, var(--color-neon-green-light), transparent) 1 100%;
+    /* h-[calc(89vh-(--spacing(4)))] md:h-[calc(88vh-(--spacing(4)))] */
+  }
+
+  .nav-link::after {
+    @apply bottom-0 left-0 h-1 w-full origin-bottom-right scale-x-0 bg-neon-yellow transition-transform duration-200 ease-out content-[''];
+  }
+}
