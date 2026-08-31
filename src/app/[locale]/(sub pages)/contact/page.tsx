@@ -9,10 +9,12 @@ export async function generateMetadata(): Promise<Metadata> {
   }
 }
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const t = await getTranslations('ContactPage')
+
   return (
     <section>
-      <h2>Contact</h2>
+      <h2>{t('title')}</h2>
       <h3>Coming Soon</h3>
     </section>
   )
