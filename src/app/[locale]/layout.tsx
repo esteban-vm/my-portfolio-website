@@ -4,7 +4,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 import { Header } from '@/components/header'
 import * as fonts from '@/lib/fonts'
-import '@/app/globals.css'
+import '@/styles/globals.css'
 
 export type Props = LayoutProps<'/[locale]'>
 
@@ -31,7 +31,7 @@ export const viewport: Viewport = {
   interactiveWidget: 'overlays-content',
 }
 
-export default async function RootLayout({ children }: Props) {
+export default async function LocaleLayout({ children }: Props) {
   return (
     <html
       className={`${fonts.balsamiq.variable} ${fonts.montserrat.variable} ${fonts.neon.variable} ${fonts.saiba45.variable} antialiased`}
