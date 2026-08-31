@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { locale } from 'next/root-params'
 import { NextIntlClientProvider } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
-import { Navigation } from '@/components/navigation'
+import { Header } from '@/components/header'
 import * as fonts from '@/lib/fonts'
 import '@/app/globals.css'
 
@@ -42,7 +42,7 @@ export default async function RootLayout({ children }: Props) {
       <body>
         <NextIntlClientProvider>
           <main className='relative h-screen'>
-            <Navigation />
+            <Header />
             {children}
           </main>
         </NextIntlClientProvider>
