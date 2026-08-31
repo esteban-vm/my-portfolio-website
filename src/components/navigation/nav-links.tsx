@@ -11,7 +11,7 @@ export function NavLinks() {
   const navbarOpen = useUIStore((s) => s.navbarOpen)
 
   return (
-    <Wrapper className={cn(navbarOpen && 'slide-in-from-top top-full animate-in')}>
+    <Wrapper className={cn(navbarOpen && 'slide-in-from-top top-[91vh] animate-in')}>
       <NavLink href='/about' text={t('AboutPage.title')} />
       <NavLink href='/projects' text={t('ProjectsPage.title')} />
       <NavLink href='/contact' text={t('ContactPage.title')} />
@@ -19,4 +19,4 @@ export function NavLinks() {
   )
 }
 
-const Wrapper = tw.nav`nav-links slide-out-to-top absolute top-[-500%] flex w-[95%] animate-out flex-col items-center justify-around text-nowrap bg-black/70 fill-mode-forwards text-center duration-700 lg:static lg:size-auto lg:animate-none lg:flex-row lg:gap-8`
+const Wrapper = tw.nav`nav-links slide-out-to-top absolute -top-full flex w-[95%] animate-out flex-col items-center justify-around text-nowrap bg-black/70 fill-mode-forwards text-center duration-700 lg:static lg:size-auto lg:animate-none lg:flex-row lg:gap-8`
