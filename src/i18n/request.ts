@@ -2,11 +2,11 @@ import type { Locale } from 'next-intl'
 import { cookies } from 'next/headers'
 import { hasLocale } from 'next-intl'
 import { getRequestConfig } from 'next-intl/server'
-import { locales } from '@/lib/constants'
+import { localeCookie, locales } from '@/lib/constants'
 
 export default getRequestConfig(async () => {
   const store = await cookies()
-  const preference = store.get('NEXT_LOCALE')?.value
+  const preference = store.get(localeCookie)?.value
 
   let locale: Locale
 
