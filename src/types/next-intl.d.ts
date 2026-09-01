@@ -1,9 +1,9 @@
-import type { routing } from '@/i18n/routing'
+import type { locales } from '@/lib/constants'
 import type messages from '../../messages/en.json'
 
 declare module 'next-intl' {
   interface AppConfig {
-    Locale: (typeof routing.locales)[number]
+    Locale: (typeof locales)[number]
     Messages: typeof messages
   }
 }
