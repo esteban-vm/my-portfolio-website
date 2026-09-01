@@ -5,13 +5,13 @@ import { getRequestConfig } from 'next-intl/server'
 import { localeCookie, locales } from '@/lib/constants'
 
 export default getRequestConfig(async () => {
-  const store = await cookies()
-  const preference = store.get(localeCookie)?.value
+  const cookieStore = await cookies()
+  const userLocale = cookieStore.get(localeCookie)?.value
 
   let locale: Locale
 
-  if (hasLocale(locales, preference)) {
-    locale = preference
+  if (hasLocale(locales, userLocale)) {
+    locale = userLocale
   } else {
     locale = locales[0]
   }

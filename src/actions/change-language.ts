@@ -6,6 +6,6 @@ import { localeCookie } from '@/lib/constants'
 
 export async function changeLanguage(locale: Locale) {
   await new Promise((r) => setTimeout(r, 2_000))
-  const store = await cookies()
-  store.set(localeCookie, locale)
+  const cookieStore = await cookies()
+  cookieStore.set(localeCookie, locale)
 }
