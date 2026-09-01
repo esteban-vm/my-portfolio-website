@@ -1,15 +1,15 @@
 'use client'
 
-import type { ValidRoute } from '@/types'
+import type { Route } from 'next'
+import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import tw from 'tailwind-styled-components'
-import { TypedLink } from '@/components/common'
 import { useUIStore } from '@/hooks'
 import { cn } from '@/lib/ui'
 
 export interface NavLinkProps {
   text: string
-  href: ValidRoute
+  href: Route
 }
 
 export function NavLink({ text, href }: NavLinkProps) {
@@ -17,11 +17,11 @@ export function NavLink({ text, href }: NavLinkProps) {
   const setNavbarOpen = useUIStore((s) => s.setNavbarOpen)
 
   return (
-    <TypedLink href={href} onNavigate={() => setNavbarOpen(false)} passHref>
+    <Link href={href} onNavigate={() => setNavbarOpen(false)} passHref>
       <Wrapper className={cn(pathname.includes(href) && 'text-neon-green-dark! after:bg-neon-green-dark!')}>
         {text}
       </Wrapper>
-    </TypedLink>
+    </Link>
   )
 }
 
