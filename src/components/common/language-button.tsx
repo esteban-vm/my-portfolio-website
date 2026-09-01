@@ -2,18 +2,19 @@
 
 import { useLocale } from 'next-intl'
 import { useTransition } from 'react'
-import { usePathname, useRouter } from '@/i18n/navigation'
+import { changeLanguage } from '@/actions'
 
 export function LanguageButton() {
   const locale = useLocale()
-  const router = useRouter()
-  const pathname = usePathname()
   const [isPending, startTransition] = useTransition()
 
-  const changeLanguage = () => {
+  const onChangeLanguage = () => {
     startTransition(async () => {
-      await new Promise((r) => setTimeout(r, 3_000))
-      router.replace(pathname, { locale: locale === 'es' ? 'en' : 'es' })
+      if (locale === 'en') {
+        await changeLanguage('es')
+      } else {
+        await changeLanguage('en')
+      }
     })
   }
 
@@ -21,10 +22,10 @@ export function LanguageButton() {
     <button
       className='cursor-pointer rounded-md bg-neon-green-dark px-2 py-1 hover:opacity-85 disabled:cursor-not-allowed disabled:opacity-70'
       disabled={isPending}
-      onClick={changeLanguage}
+      onClick={onChangeLanguage}
       type='button'
     >
-      Change Language
+      Change/Cambiar
     </button>
   )
 }
