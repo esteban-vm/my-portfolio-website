@@ -1,20 +1,20 @@
 'use client'
 
+import Link from 'next/link'
 import tw from 'tailwind-styled-components'
 import { useUIStore } from '@/hooks'
-import { TypedLink } from '../common'
 
 export function HomeLink() {
   const setNavbarOpen = useUIStore((s) => s.setNavbarOpen)
 
   return (
     <h1>
-      <TypedLink href='/' onNavigate={() => setNavbarOpen(false)} passHref>
+      <Link href='/' onNavigate={() => setNavbarOpen(false)} passHref>
         <NameLogo>
           Esteban
           <LastName>&nbsp;V.M.</LastName>
         </NameLogo>
-      </TypedLink>
+      </Link>
     </h1>
   )
 }
