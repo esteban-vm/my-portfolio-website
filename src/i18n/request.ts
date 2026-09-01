@@ -1,19 +1,26 @@
 import type { Locale } from 'next-intl'
-import { cookies } from 'next/headers'
+import { cookies, headers } from 'next/headers'
 import { hasLocale } from 'next-intl'
 import { getRequestConfig } from 'next-intl/server'
 import { localeCookie, locales } from '@/lib/constants'
 
 export default getRequestConfig(async () => {
   const cookieStore = await cookies()
-  const userLocale = cookieStore.get(localeCookie)?.value
+  const savedLocale = cookieStore.get(localeCookie)?.value
 
   let locale: Locale
 
-  if (hasLocale(locales, userLocale)) {
-    locale = userLocale
+  if (hasLocale(locales, savedLocale)) {
+    locale = savedLocale
   } else {
-    locale = locales[0]
+    const headersList = await headers()
+    const acceptLanguage = headersList.get('accept-language') ?? ''
+
+    if (acceptLanguage.startsWith('en')) {
+      locale = locales[0]
+    } else {
+      locale = locales[1]
+    }
   }
 
   return {
