@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getTranslations } from 'next-intl/server'
+import { Footer } from '@/components/footer'
 import { Header } from '@/components/header'
 import * as fonts from '@/lib/fonts'
 import '@/styles/globals.css'
@@ -43,6 +44,7 @@ export default async function RootLayout({ children }: Props) {
           <main className='relative h-screen'>
             <Header />
             {children}
+            <Footer />
           </main>
         </NextIntlClientProvider>
       </body>
