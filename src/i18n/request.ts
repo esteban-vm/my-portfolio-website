@@ -16,7 +16,7 @@ export default getRequestConfig(async () => {
     const headersList = await headers()
     const acceptLanguage = headersList.get('accept-language') ?? ''
 
-    if (acceptLanguage.startsWith('es')) {
+    if (acceptLanguage.startsWith(locales[1])) {
       locale = locales[1]
     } else {
       locale = locales[0]
