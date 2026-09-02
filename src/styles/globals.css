@@ -25,8 +25,8 @@
     --header-height: 11vh;
   }
 
-  * {
-    @apply selection:bg-neon-magenta-dark selection:text-neon-magenta-light;
+  *::selection {
+    @apply bg-neon-magenta-dark text-neon-magenta-light;
   }
 
   html {
