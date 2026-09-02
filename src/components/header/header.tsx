@@ -15,5 +15,5 @@ export function Header() {
   )
 }
 
-const Wrapper = tw.header`container pointer-events-none absolute top-3 left-1/2 z-30 flex h-(--header-height) -translate-x-1/2`
+const Wrapper = tw.header`container pointer-events-none absolute top-3 left-1/2 z-30 flex h-(--header-height) -translate-x-1/2 border-neon-yellow border-b`
 const InnerWrapper = tw.div`relative flex size-full items-center justify-around`
