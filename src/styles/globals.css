@@ -22,6 +22,7 @@
   --animate-glitch: glitch 10s step-end infinite;
 
   --header-height: 11vh;
+  --footer-height: 9vh;
 }
 
 @layer base {
@@ -61,10 +62,9 @@
   }
 
   /* biome-ignore assist/source/useSortedProperties: <> */
-  .navbar {
-    @apply h-[calc(80vh-(--spacing(4)))] border-4 border-solid rounded-b-lg border-transparent lg:border-none lg:rounded-none;
+  .navbar-bordered {
+    @apply border-4 border-solid rounded-b-lg border-transparent lg:border-none lg:rounded-none;
     border-image: linear-gradient(to bottom, var(--color-neon-green-light), transparent) 1 100%;
-    /* h-[calc(89vh-(--spacing(4)))] md:h-[calc(88vh-(--spacing(4)))] */
   }
 
   .nav-link::after {

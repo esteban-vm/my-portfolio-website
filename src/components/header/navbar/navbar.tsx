@@ -13,7 +13,7 @@ export function Navbar() {
   return (
     <Wrapper
       className={cn({
-        'slide-in-from-top top-[calc(100vh-var(--header-height)+(--spacing(2)))] animate-in': navbarOpen,
+        'slide-in-from-top top-[calc(100vh-var(--header-height))] animate-in': navbarOpen,
       })}
     >
       <NavLink href='/about' text={t('AboutPage.title')} />
@@ -23,4 +23,4 @@ export function Navbar() {
   )
 }
 
-const Wrapper = tw.nav`navbar slide-out-to-top absolute -top-full flex w-[95%] animate-out flex-col items-center justify-around text-nowrap bg-black/70 fill-mode-forwards text-center duration-700 lg:static lg:size-auto lg:animate-none lg:flex-row lg:gap-8`
+const Wrapper = tw.nav`navbar-bordered slide-out-to-top absolute -top-full flex h-[calc(80vh-(--spacing(4)))] w-[95%] animate-out flex-col items-center justify-around text-nowrap bg-black/70 fill-mode-forwards text-center duration-700 lg:static lg:size-auto lg:animate-none lg:flex-row lg:gap-8`
