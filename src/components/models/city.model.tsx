@@ -2,7 +2,7 @@
 
 import type * as THREE from 'three'
 import type { GLTF } from 'three-stdlib'
-import { useGLTF } from '@react-three/drei'
+import { useModelLoader } from '@/hooks'
 
 interface GLTFResult extends GLTF {
   nodes: {
@@ -17,12 +17,8 @@ interface GLTFResult extends GLTF {
   }
 }
 
-useGLTF.setDecoderPath('/draco/')
-
-const path = '/models/city.glb'
-
 export function CityModel(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF(path) as unknown as GLTFResult
+  const { nodes, materials } = useModelLoader('city') as unknown as GLTFResult
 
   return (
     <group {...props} dispose={null}>
@@ -54,4 +50,4 @@ export function CityModel(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload(path)
+useModelLoader.preload('city')

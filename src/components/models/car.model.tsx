@@ -2,9 +2,9 @@
 
 import type * as THREE from 'three'
 import type { GLTF } from 'three-stdlib'
-import { useGLTF } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import { useRef } from 'react'
+import { useModelLoader } from '@/hooks'
 
 interface GLTFResult extends GLTF {
   nodes: {
@@ -15,13 +15,9 @@ interface GLTFResult extends GLTF {
   }
 }
 
-useGLTF.setDecoderPath('/draco/')
-
-const path = '/models/car.glb'
-
 export function CarModel(props: JSX.IntrinsicElements['group']) {
   const modelRef = useRef<THREE.Group>(null!)
-  const { nodes, materials } = useGLTF(path) as unknown as GLTFResult
+  const { nodes, materials } = useModelLoader('car') as unknown as GLTFResult
 
   useFrame(({ camera, clock }) => {
     const y = Math.sin(clock.elapsedTime) * 0.15
@@ -43,4 +39,4 @@ export function CarModel(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload(path)
+useModelLoader.preload('car')

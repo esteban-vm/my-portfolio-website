@@ -2,10 +2,11 @@
 
 import type * as THREE from 'three'
 import type { GLTF } from 'three-stdlib'
-import { useAnimations, useGLTF } from '@react-three/drei'
+import { useAnimations } from '@react-three/drei'
 import { useGraph } from '@react-three/fiber'
 import { useEffect, useMemo, useRef } from 'react'
 import { SkeletonUtils } from 'three-stdlib'
+import { useModelLoader } from '@/hooks'
 
 interface GLTFAction extends THREE.AnimationClip {
   name: 'Take 001'
@@ -30,13 +31,9 @@ interface GLTFResult extends GLTF {
   animations: GLTFAction[]
 }
 
-useGLTF.setDecoderPath('/draco/')
-
-const path = '/models/robot.glb'
-
 export function RobotModel(props: JSX.IntrinsicElements['group']) {
   const group = useRef<THREE.Group>(null!)
-  const { scene, animations } = useGLTF(path)
+  const { scene, animations } = useModelLoader('robot')
   const clone = useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes, materials } = useGraph(clone) as unknown as GLTFResult
   const { actions } = useAnimations(animations, group)
@@ -92,4 +89,4 @@ export function RobotModel(props: JSX.IntrinsicElements['group']) {
   )
 }
 
-useGLTF.preload(path)
+useModelLoader.preload('robot')
