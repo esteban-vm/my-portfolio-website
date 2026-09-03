@@ -1,2 +1,2 @@
-export const locales = ['en', 'es'] as const
-export const localeCookie = 'NEXT_LOCALE'
+export const LOCALES = ['en', 'es'] as const
+export const LOCALE_COOKIE = 'NEXT_LOCALE'
