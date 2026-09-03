@@ -70,4 +70,14 @@
   .nav-link::after {
     @apply bottom-0 left-0 h-1 w-full origin-bottom-right scale-x-0 bg-neon-yellow transition-transform duration-200 ease-out content-[''];
   }
+
+  .action-button {
+    &::before {
+      @apply absolute top-[120%] h-1/6 w-full rotate-x-12 scale-x-125 scale-y-50 transform bg-neon-magenta-light opacity-60 blur-sm content-[''];
+    }
+
+    &::after {
+      @apply absolute top-0 right-0 bottom-0 left-0 -z-10 bg-neon-magenta-light opacity-0 shadow shadow-neon-magenta-light transition-opacity ease-linear content-[''];
+    }
+  }
 }
