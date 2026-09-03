@@ -1,10 +1,29 @@
+import { useLocale } from 'next-intl'
+import { useTransition } from 'react'
+import { TbMusic } from 'react-icons/tb'
 import tw from 'tailwind-styled-components'
+import { changeLanguage } from '@/actions'
 import { ActionButton } from './action-button'
 
 export function Footer() {
+  const locale = useLocale()
+  const [isPending, startTransition] = useTransition()
+
+  const onChangeLanguage = () => {
+    startTransition(async () => {
+      if (locale === 'en') {
+        await changeLanguage('es')
+      } else {
+        await changeLanguage('en')
+      }
+    })
+  }
+
   return (
     <Wrapper>
-      <ActionButton />
+      <ActionButton disabled={isPending} onClick={onChangeLanguage}>
+        <TbMusic />
+      </ActionButton>
       <ActionButton />
     </Wrapper>
   )
