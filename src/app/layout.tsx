@@ -1,8 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getTranslations } from 'next-intl/server'
-import { Footer } from '@/components/footer'
-import { Header } from '@/components/header'
+import { Footer, Header } from '@/components/layouts'
 import * as fonts from '@/lib/fonts'
 import '@/styles/globals.css'
 
