@@ -18,8 +18,8 @@ export function Navbar() {
   const routeMap: Record<Route, string> = {
     '/': '',
     '/about': t('AboutPage.title'),
-    '/contact': t('ProjectsPage.title'),
-    '/projects': t('ContactPage.title'),
+    '/contact': t('ContactPage.title'),
+    '/projects': t('ProjectsPage.title'),
   }
 
   return (
