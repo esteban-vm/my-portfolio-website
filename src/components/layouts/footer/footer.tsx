@@ -46,17 +46,17 @@ export function Footer() {
 
   return (
     <$.Footer>
-      <$.Button
+      <$.ActionButton
         onClick={() => setMusicOn(!musicOn)}
         title={musicOn ? t('AudioButton.off') : t('AudioButton.on')}
         type='button'
       >
         {musicOn ? <TbMusicOff /> : <TbMusic />}
-      </$.Button>
-      <$.Button disabled={isPending} onClick={onChangeLanguage} title={t('LanguageButton')} type='button'>
+      </$.ActionButton>
+      <$.ActionButton disabled={isPending} onClick={onChangeLanguage} title={t('LanguageButton')} type='button'>
         <TbLanguage />
         <$.LanguageBadge>{locale}</$.LanguageBadge>
-      </$.Button>
+      </$.ActionButton>
     </$.Footer>
   )
 }
