@@ -31,7 +31,7 @@ export function Navbar() {
       {ROUTES.map((route) => {
         return (
           <Link href={route} key={route} onNavigate={() => setNavbarOpen(false)} passHref>
-            <$.NavLink className={cn(pathname.includes(route) && 'text-neon-green-dark! after:bg-neon-green-dark!')}>
+            <$.NavLink className={cn({ 'text-neon-green-dark after:bg-neon-green-dark': pathname === route })}>
               {routeMap[route]}
             </$.NavLink>
           </Link>
