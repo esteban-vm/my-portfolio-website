@@ -20,5 +20,12 @@
   },
   "ProjectsPage": {
     "title": "Projects"
+  },
+  "Footer": {
+    "AudioButton": {
+      "on": "Turn on music",
+      "off": "Turn off music"
+    },
+    "LanguageButton": "Switch to Spanish"
   }
 }
