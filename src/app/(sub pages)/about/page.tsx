@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
-import { LanguageButton } from '@/components/common'
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations('AboutPage')
@@ -17,7 +16,6 @@ export default async function AboutPage() {
     <section>
       <h2>{t('title')}</h2>
       <h3>Coming Soon</h3>
-      <LanguageButton />
     </section>
   )
 }
