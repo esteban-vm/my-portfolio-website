@@ -26,10 +26,13 @@
 }
 
 @layer base {
-  *::selection {
-    @apply bg-neon-magenta-dark text-neon-magenta-light;
-  }
+  * {
+    scrollbar-width: thin;
 
+    &::selection {
+      @apply bg-neon-magenta-dark text-neon-magenta-light;
+    }
+  }
   html {
     @apply bg-black font-balsamiq;
   }
