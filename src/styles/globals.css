@@ -6,7 +6,6 @@
 
 @theme {
   --font-balsamiq: var(--balsamiq);
-  --font-montserrat: var(--montserrat);
   --font-neon: var(--neon);
   --font-saiba45: var(--saiba45);
 
@@ -33,6 +32,7 @@
       @apply bg-neon-magenta-dark text-neon-magenta-light;
     }
   }
+
   html {
     @apply bg-black font-balsamiq;
   }

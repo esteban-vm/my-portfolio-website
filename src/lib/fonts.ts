@@ -11,14 +11,11 @@ export const balsamiq = localFont({
   ],
 })
 
-export const montserrat = localFont({
-  variable: '--montserrat',
+export const neon = localFont({
+  variable: '--neon',
   display: 'swap',
   fallback: ['sans-serif'],
-  src: [
-    { path: '../../public/fonts/Montserrat-regular.woff2', style: 'normal' },
-    { path: '../../public/fonts/Montserrat-italic.woff2', style: 'italic' },
-  ],
+  src: '../../public/fonts/Neon.woff2',
 })
 
 export const saiba45 = localFont({
@@ -26,11 +23,4 @@ export const saiba45 = localFont({
   display: 'swap',
   fallback: ['cursive'],
   src: '../../public/fonts/SAIBA-45.woff2',
-})
-
-export const neon = localFont({
-  variable: '--neon',
-  display: 'swap',
-  fallback: ['sans-serif'],
-  src: '../../public/fonts/Neon.woff2',
 })

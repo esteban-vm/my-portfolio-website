@@ -33,7 +33,7 @@ export const viewport: Viewport = {
 export default async function RootLayout({ children }: Props) {
   return (
     <html
-      className={`${fonts.balsamiq.variable} ${fonts.montserrat.variable} ${fonts.neon.variable} ${fonts.saiba45.variable} antialiased`}
+      className={`${fonts.balsamiq.variable} ${fonts.neon.variable} ${fonts.saiba45.variable} antialiased`}
       dir='ltr'
       lang={await getLocale()}
       suppressHydrationWarning
