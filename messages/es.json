@@ -1,7 +1,7 @@
 {
   "HomePage": {
     "title": {
-      "default": "Mi portafolio",
+      "default": "Mi portafolio | Inicio",
       "template": "Mi portafolio | %s"
     },
     "description": "Mi portafolio web",

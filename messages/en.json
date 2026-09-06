@@ -1,7 +1,7 @@
 {
   "HomePage": {
     "title": {
-      "default": "My Portfolio",
+      "default": "My Portfolio | Home",
       "template": "My Portfolio | %s"
     },
     "description": "My portfolio website",
