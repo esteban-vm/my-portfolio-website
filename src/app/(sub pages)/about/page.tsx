@@ -10,7 +10,6 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function AboutPage() {
-  await new Promise((r) => setTimeout(r, 2_000))
   const t = await getTranslations('AboutPage')
 
   return (
