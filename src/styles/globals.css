@@ -6,7 +6,6 @@
 
 @theme {
   --font-balsamiq: var(--balsamiq);
-  --font-neon: var(--neon);
   --font-saiba45: var(--saiba45);
 
   --color-neon-green-lighter: oklch(82.77% 0.057 165.9);

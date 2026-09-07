@@ -11,13 +11,6 @@ export const balsamiq = localFont({
   ],
 })
 
-export const neon = localFont({
-  variable: '--neon',
-  display: 'swap',
-  fallback: ['sans-serif'],
-  src: '../../public/fonts/Neon.woff2',
-})
-
 export const saiba45 = localFont({
   variable: '--saiba45',
   display: 'swap',
