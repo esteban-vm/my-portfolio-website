@@ -1,6 +1,6 @@
 import tw from 'tailwind-styled-components'
 
-export const Card = tw.div`hover:paused fl-text-xs/base absolute top-[calc(var(--header-height)+(--spacing(8)))] left-1/2 z-10 w-full max-w-sm -translate-x-1/2 animate-blink rounded-md bg-neon-green-dark p-3 text-center font-semibold text-black uppercase lg:max-w-lg lg:p-5`
+export const Card = tw.div`fl-text-xs/base hover:paused absolute top-[calc(var(--header-height)+(--spacing(8)))] left-1/2 z-10 w-[90%] max-w-sm -translate-x-1/2 animate-blink rounded-md bg-neon-green-dark p-3 text-center font-semibold text-black uppercase lg:w-full lg:max-w-lg lg:p-5`
 
 export const Text = tw.p`line-clamp-3 text-pretty`
 
