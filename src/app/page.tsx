@@ -1,5 +1,11 @@
+import { Card } from '@/components/layouts'
 import { HomeScene } from '@/components/scenes'
 
 export default function HomePage() {
-  return <HomeScene />
+  return (
+    <>
+      <Card />
+      <HomeScene />
+    </>
+  )
 }
