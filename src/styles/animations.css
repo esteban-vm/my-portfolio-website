@@ -3,19 +3,19 @@
   100% {
     background-color: var(--color-neon-green-darker);
     box-shadow:
+      0 0 2px var(--color-neon-green-darker),
       0 0 4px var(--color-neon-green-darker),
-      0 0 8px var(--color-neon-green-darker),
-      0 0 12px var(--color-neon-green-darker),
-      0 0 16px var(--color-neon-green-darker);
+      0 0 6px var(--color-neon-green-darker),
+      0 0 8px var(--color-neon-green-darker);
   }
 
   50% {
     background-color: var(--color-neon-green-lighter);
     box-shadow:
+      0 0 2px var(--color-neon-green-lighter),
       0 0 4px var(--color-neon-green-lighter),
-      0 0 8px var(--color-neon-green-lighter),
-      0 0 12px var(--color-neon-green-lighter),
-      0 0 16px var(--color-neon-green-lighter);
+      0 0 6px var(--color-neon-green-lighter),
+      0 0 8px var(--color-neon-green-lighter);
   }
 }
 
@@ -213,5 +213,28 @@
   67%,
   92% {
     clip-path: none;
+  }
+}
+
+@media (width >= 64rem) {
+  @keyframes blink {
+    0%,
+    100% {
+      background-color: var(--color-neon-green-darker);
+      box-shadow:
+        0 0 4px var(--color-neon-green-darker),
+        0 0 8px var(--color-neon-green-darker),
+        0 0 12px var(--color-neon-green-darker),
+        0 0 16px var(--color-neon-green-darker);
+    }
+
+    50% {
+      background-color: var(--color-neon-green-lighter);
+      box-shadow:
+        0 0 4px var(--color-neon-green-lighter),
+        0 0 8px var(--color-neon-green-lighter),
+        0 0 12px var(--color-neon-green-lighter),
+        0 0 16px var(--color-neon-green-lighter);
+    }
   }
 }
