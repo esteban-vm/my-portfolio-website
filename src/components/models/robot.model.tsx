@@ -47,12 +47,10 @@ export function RobotModel(props: JSX.IntrinsicElements['group']) {
       <group name='Sketchfab_Scene'>
         <primitive object={nodes._rootJoint} />
         <mesh
-          castShadow
           geometry={nodes.Cylinder001_M_Suelo_0.geometry}
           material={materials.M_Suelo}
           name='Cylinder001_M_Suelo_0'
           position={[-0.007, 0, -0.035]}
-          receiveShadow
           rotation={[-Math.PI / 2, 0, 0]}
           scale={0.057}
         />

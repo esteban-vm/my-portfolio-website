@@ -28,10 +28,8 @@ export function CarModel(props: JSX.IntrinsicElements['group']) {
   return (
     <group {...props} dispose={null} ref={modelRef}>
       <mesh
-        castShadow
         geometry={nodes.dmc_M_dmc_0.geometry}
         material={materials.M_dmc}
-        receiveShadow
         rotation={[-Math.PI / 2, 0, 0]}
         scale={1.065}
       />

@@ -23,26 +23,20 @@ export function CityModel(props: JSX.IntrinsicElements['group']) {
   return (
     <group {...props} dispose={null}>
       <mesh
-        castShadow
         geometry={nodes.Object_4.geometry}
         material={materials.PaletteMaterial001}
-        receiveShadow
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.007}
       />
       <mesh
-        castShadow
         geometry={nodes.Object_5.geometry}
         material={materials.PaletteMaterial002}
-        receiveShadow
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.007}
       />
       <mesh
-        castShadow
         geometry={nodes.Object_22.geometry}
         material={materials.PaletteMaterial003}
-        receiveShadow
         rotation={[Math.PI / 2, 0, 0]}
         scale={0.007}
       />
