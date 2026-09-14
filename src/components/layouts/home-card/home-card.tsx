@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import { LuArrowBigRight } from 'react-icons/lu'
-import * as $ from './card.styled'
+import * as $ from './home-card.styled'
 
-export function Card() {
+export function HomeCard() {
   return (
-    <$.Card>
+    <$.Wrapper>
       <div className='relative'>
         <$.Text>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dignissim vitae lacus vitae porttitor. Proin
@@ -18,6 +18,6 @@ export function Card() {
           </$.Link>
         </Link>
       </div>
-    </$.Card>
+    </$.Wrapper>
   )
 }
