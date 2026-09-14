@@ -3,15 +3,15 @@
 import Link from 'next/link'
 import { LuMenu, LuX } from 'react-icons/lu'
 import { useUIStore } from '@/hooks'
+import * as $ from './app-header.styled'
 import { AppNavbar } from './app-navbar'
-import * as $ from './header.styled'
 
-export function Header() {
+export function AppHeader() {
   const navbarOpen = useUIStore((s) => s.navbarOpen)
   const setNavbarOpen = useUIStore((s) => s.setNavbarOpen)
 
   return (
-    <$.Header>
+    <$.Wrapper>
       <$.Content>
         <h1>
           <Link href='/' onNavigate={() => setNavbarOpen(false)} passHref>
@@ -26,6 +26,6 @@ export function Header() {
         </$.MobileButton>
         <AppNavbar />
       </$.Content>
-    </$.Header>
+    </$.Wrapper>
   )
 }
