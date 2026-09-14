@@ -7,9 +7,9 @@ import { useTranslations } from 'next-intl'
 import { useUIStore } from '@/hooks'
 import { ROUTES } from '@/lib/constants'
 import { cn } from '@/lib/ui'
-import * as $ from './navbar.styled'
+import * as $ from './app-navbar.styled'
 
-export function Navbar() {
+export function AppNavbar() {
   const t = useTranslations()
   const pathname = usePathname()
   const navbarOpen = useUIStore((s) => s.navbarOpen)
@@ -23,7 +23,7 @@ export function Navbar() {
   }
 
   return (
-    <$.Navbar
+    <$.Wrapper
       className={cn({
         'slide-in-from-top top-[calc(100vh-var(--header-height)-(--spacing(1.5)))] animate-in': navbarOpen,
       })}
@@ -43,6 +43,6 @@ export function Navbar() {
           </Link>
         )
       })}
-    </$.Navbar>
+    </$.Wrapper>
   )
 }

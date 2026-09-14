@@ -3,8 +3,8 @@
 import Link from 'next/link'
 import { LuMenu, LuX } from 'react-icons/lu'
 import { useUIStore } from '@/hooks'
+import { AppNavbar } from './app-navbar'
 import * as $ from './header.styled'
-import { Navbar } from './navbar'
 
 export function Header() {
   const navbarOpen = useUIStore((s) => s.navbarOpen)
@@ -24,7 +24,7 @@ export function Header() {
         <$.MobileButton onClick={() => setNavbarOpen(!navbarOpen)}>
           {navbarOpen ? <LuX aria-label='Cerrar Menú' /> : <LuMenu aria-label='Desplegar Menú' />}
         </$.MobileButton>
-        <Navbar />
+        <AppNavbar />
       </$.Content>
     </$.Header>
   )
