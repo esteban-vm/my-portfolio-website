@@ -1,22 +1,38 @@
+'use client'
+
+import type { Route } from 'next'
 import Link from 'next/link'
+import { useCallback, useEffect } from 'react'
 import { LuArrowBigRight } from 'react-icons/lu'
+import { useUIStore } from '@/hooks'
 import * as $ from './home-card.styled'
 
-export function HomeCard() {
+export interface HomeCardProps {
+  text: string
+  link?: Route
+  linkText?: string
+}
+
+export function HomeCard({ text, link, linkText = 'Ver más' }: HomeCardProps) {
+  const setSceneRotating = useUIStore((s) => s.setSceneRotating)
+
+  const stop = () => setSceneRotating(false)
+  const rotate = useCallback(() => setSceneRotating(true), [setSceneRotating])
+
+  useEffect(rotate, [rotate])
+
   return (
-    <$.Wrapper>
+    <$.Wrapper onPointerEnter={stop} onPointerLeave={rotate} onPointerOut={rotate} onPointerOver={stop}>
       <div className='relative'>
-        <$.Text>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dignissim vitae lacus vitae porttitor. Proin
-          nunc arcu, facilisis in nibh sit amet, molestie efficitur dui. Sed rhoncus vulputate neque a ultricies.
-          Maecenas molestie libero id mi fermentum malesuada.
-        </$.Text>
-        <Link href='/' passHref>
-          <$.Link>
-            <span>Ver más</span>
-            <$.Icon $as={LuArrowBigRight} />
-          </$.Link>
-        </Link>
+        <$.Text>{text}</$.Text>
+        {link && (
+          <Link href={link} passHref>
+            <$.Link>
+              <span>{linkText}</span>
+              <$.Icon $as={LuArrowBigRight} />
+            </$.Link>
+          </Link>
+        )}
       </div>
     </$.Wrapper>
   )
