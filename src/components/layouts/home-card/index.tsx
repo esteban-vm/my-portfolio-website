@@ -4,9 +4,9 @@ import type { SceneStage } from '@/types'
 import { useUIStore } from '@/hooks'
 import { HomeCard } from './home-card'
 
-type HomeCardRendered = Record<NonNullable<SceneStage>, JSX.Element>
+type HomeCardMap = Record<NonNullable<SceneStage>, JSX.Element>
 
-const cardRendered: HomeCardRendered = {
+const homeCardMap: HomeCardMap = {
   '1': (
     <HomeCard text='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc dignissim vitae lacus vitae porttitor. Proin nunc arcu, facilisis in nibh sit amet, molestie efficitur dui. Sed rhoncus vulputate neque a ultricies. Maecenas molestie libero id mi fermentum malesuada.' />
   ),
@@ -32,5 +32,5 @@ const cardRendered: HomeCardRendered = {
 
 export function HomeCardRenderer() {
   const currentStage = useUIStore((s) => s.currentStage)
-  return currentStage && cardRendered[currentStage]
+  return currentStage && homeCardMap[currentStage]
 }
