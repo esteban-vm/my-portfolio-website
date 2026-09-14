@@ -13,7 +13,7 @@ export interface HomeCardProps {
   linkText?: string
 }
 
-export function HomeCard({ text, link, linkText = 'Ver más' }: HomeCardProps) {
+export function HomeCard({ text, link, linkText }: HomeCardProps) {
   const setSceneRotating = useUIStore((s) => s.setSceneRotating)
 
   const stop = () => setSceneRotating(false)
@@ -25,7 +25,7 @@ export function HomeCard({ text, link, linkText = 'Ver más' }: HomeCardProps) {
     <$.Wrapper onPointerEnter={stop} onPointerLeave={rotate} onPointerOut={rotate} onPointerOver={stop}>
       <div className='relative'>
         <$.Text>{text}</$.Text>
-        {link && (
+        {link && linkText && (
           <Link href={link} passHref>
             <$.Link>
               <span>{linkText}</span>
