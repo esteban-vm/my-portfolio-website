@@ -1,10 +1,10 @@
-import { HomeCard } from '@/components/layouts'
+import { HomeCardRenderer } from '@/components/layouts'
 import { HomeScene } from '@/components/scenes'
 
 export default function HomePage() {
   return (
     <>
-      <HomeCard />
+      <HomeCardRenderer />
       <HomeScene />
     </>
   )
