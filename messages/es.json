@@ -1,5 +1,5 @@
 {
-  "HomePage": {
+  "RootLayout": {
     "title": {
       "default": "Mi portafolio | Inicio",
       "template": "Mi portafolio | %s"

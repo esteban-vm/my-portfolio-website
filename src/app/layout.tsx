@@ -5,10 +5,8 @@ import { Footer, Header } from '@/components/layouts'
 import { balsamiq, saiba45 } from '@/lib/fonts'
 import '@/styles/globals.css'
 
-export type Props = LayoutProps<'/'>
-
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations('HomePage')
+  const t = await getTranslations('RootLayout')
 
   return {
     title: {
@@ -30,7 +28,7 @@ export const viewport: Viewport = {
   interactiveWidget: 'overlays-content',
 }
 
-export default async function RootLayout({ children }: Props) {
+export default async function RootLayout({ children }: LayoutProps<'/'>) {
   return (
     <html className={`${balsamiq.variable} ${saiba45.variable} antialiased`} dir='ltr' lang={await getLocale()}>
       <body>
