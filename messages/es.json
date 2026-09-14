@@ -27,5 +27,22 @@
       "off": "Apagar música"
     },
     "LanguageButton": "Cambiar a inglés"
+  },
+  "HomeCards": {
+    "1": {
+      "text": "Hola, soy Esteban V.M., un desarrollador Full Stack de Paraguay."
+    },
+    "2": {
+      "text": "He aprendido mucho por mí mismo y desarrollado muchas habilidades en el proceso.",
+      "linkText": "Saber más"
+    },
+    "3": {
+      "text": "He hecho muchos proyectos hasta ahora, usando varios frameworks web ¿Quieres verlos?",
+      "linkText": "Visita mi portafolio"
+    },
+    "4": {
+      "text": "¿Tienes un proyecto en mente o buscas un desarrollador web? Estoy a sólo unos clicks.",
+      "linkText": "¡Hablemos!"
+    }
   }
 }
