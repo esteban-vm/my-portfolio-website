@@ -21,7 +21,7 @@
   "ProjectsPage": {
     "title": "Proyectos"
   },
-  "Footer": {
+  "AppFooter": {
     "AudioButton": {
       "on": "Encender música",
       "off": "Apagar música"

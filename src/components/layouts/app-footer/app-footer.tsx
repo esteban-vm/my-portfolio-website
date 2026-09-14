@@ -4,11 +4,11 @@ import { useLocale, useTranslations } from 'next-intl'
 import { useEffect, useRef, useState, useTransition } from 'react'
 import { TbLanguage, TbMusic, TbMusicOff } from 'react-icons/tb'
 import { changeLanguage } from '@/actions'
-import * as $ from './footer.styled'
+import * as $ from './app-footer.styled'
 
-export function Footer() {
+export function AppFooter() {
   const locale = useLocale()
-  const t = useTranslations('Footer')
+  const t = useTranslations('AppFooter')
   const [musicOn, setMusicOn] = useState(false)
   const audioRef = useRef<HTMLAudioElement>(null!)
   const [isPending, startTransition] = useTransition()
@@ -45,7 +45,7 @@ export function Footer() {
   }
 
   return (
-    <$.Footer>
+    <$.Wrapper>
       <$.ActionButton
         onClick={() => setMusicOn(!musicOn)}
         title={musicOn ? t('AudioButton.off') : t('AudioButton.on')}
@@ -57,6 +57,6 @@ export function Footer() {
         <TbLanguage />
         <$.LanguageBadge>{locale}</$.LanguageBadge>
       </$.ActionButton>
-    </$.Footer>
+    </$.Wrapper>
   )
 }
