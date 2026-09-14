@@ -2,7 +2,8 @@
 
 import type * as THREE from 'three'
 import type { GLTF } from 'three-stdlib'
-import { useModelLoader } from '@/hooks'
+import { useFrame } from '@react-three/fiber'
+import { useModelLoader, useUIStore } from '@/hooks'
 
 interface GLTFResult extends GLTF {
   nodes: {
@@ -19,6 +20,32 @@ interface GLTFResult extends GLTF {
 
 export function CityModel(props: JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useModelLoader('city') as unknown as GLTFResult
+  const setCurrentStage = useUIStore((s) => s.setCurrentStage)
+
+  useFrame(({ camera }) => {
+    const cameraX = camera.position.x
+
+    switch (true) {
+      case cameraX >= -1 && cameraX <= 1:
+        setCurrentStage(1)
+        break
+      case cameraX >= 1.5 && cameraX <= 5:
+      case cameraX <= -1.5 && cameraX >= -5:
+        setCurrentStage(2)
+        break
+      case cameraX >= 5.5 && cameraX <= 9:
+      case cameraX <= -5.5 && cameraX >= -9:
+        setCurrentStage(3)
+        break
+      case cameraX >= 9.5:
+      case cameraX <= -9.5:
+        setCurrentStage(4)
+        break
+      default:
+        setCurrentStage(null)
+        break
+    }
+  })
 
   return (
     <group {...props} dispose={null}>
