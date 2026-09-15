@@ -1,6 +1,6 @@
 import tw from 'tailwind-styled-components'
 
-export const Wrapper = tw.header`container pointer-events-none fixed top-3 left-1/2 z-30 flex h-(--header-height) -translate-x-1/2`
+export const Wrapper = tw.header`container pointer-events-none fixed top-3 left-1/2 z-30 flex h-(--header-height) -translate-x-1/2 rounded-b-md bg-black lg:bg-transparent`
 
 export const Content = tw.div`relative flex size-full items-center justify-around`
 
