@@ -42,15 +42,15 @@
   }
 
   section {
-    @apply size-full text-center text-white;
+    @apply size-full text-neon-magenta-light;
 
-    h2 {
+    /* h2 {
       @apply text-neon-green-light;
     }
 
     h3 {
       @apply mt-4 text-neon-green-lighter;
-    }
+    } */
   }
 
   canvas {
@@ -81,5 +81,13 @@
     &::after {
       @apply absolute top-0 right-0 bottom-0 left-0 -z-10 bg-neon-magenta-light opacity-0 shadow shadow-neon-magenta-light transition-opacity ease-linear content-[''];
     }
+  }
+
+  .form-label {
+    @apply flex flex-1 cursor-pointer font-semibold select-none flex-col;
+  }
+
+  .form-control {
+    @apply rounded-lg border-2 border-neon-magenta-light p-1.5 outline-neon-magenta-light outline-offset-1 text-white focus:outline-1;
   }
 }
