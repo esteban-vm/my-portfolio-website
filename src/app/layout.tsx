@@ -33,7 +33,7 @@ export default async function RootLayout({ children }: LayoutProps<'/'>) {
     <html className={`${balsamiq.variable} ${saiba45.variable} antialiased`} dir='ltr' lang={await getLocale()}>
       <body>
         <NextIntlClientProvider>
-          <main className='relative h-screen'>
+          <main className='relative min-h-screen'>
             <AppHeader />
             {children}
             <AppFooter />
