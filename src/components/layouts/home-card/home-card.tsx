@@ -19,7 +19,7 @@ export function HomeCard({ text, link, linkText }: HomeCardProps) {
   const stop = () => setSceneRotating(false)
   const rotate = useCallback(() => setSceneRotating(true), [setSceneRotating])
 
-  useEffect(rotate, [rotate])
+  useEffect(() => rotate, [rotate])
 
   return (
     <$.Wrapper onPointerEnter={stop} onPointerLeave={rotate} onPointerOut={rotate} onPointerOver={stop}>
