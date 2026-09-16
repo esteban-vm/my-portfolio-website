@@ -1,4 +1,4 @@
-import { HomeCardRenderer } from '@/components/layouts'
+import { HomeCardRenderer } from '@/components/cards'
 import { HomeScene } from '@/components/scenes'
 
 export default function HomePage() {
