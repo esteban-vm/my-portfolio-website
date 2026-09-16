@@ -5,7 +5,7 @@ import { Canvas } from '@react-three/fiber'
 import { lazy, Suspense } from 'react'
 import { useMediaQuery } from 'react-responsive'
 import { useUIStore } from '@/hooks'
-import { ModelLoader } from '../common'
+import { SceneLoader } from '../loaders'
 
 const City = lazy(() => import('../models').then((mod) => ({ default: mod.CityModel })))
 const Car = lazy(() => import('../models').then((mod) => ({ default: mod.CarModel })))
@@ -18,7 +18,7 @@ export function HomeScene() {
 
   return (
     <Canvas>
-      <Suspense fallback={<ModelLoader />}>
+      <Suspense fallback={<SceneLoader />}>
         <City position={[-2, isMD ? -2.5 : -1.5, 2]} rotation={[0, polarAngle, 0]} scale={isMD ? 1 : 1.2} />
         <Car rotation={[0, polarAngle, 0.2]} scale={isMD ? 0.15 : 0.2} />
         <directionalLight color='#d3fc17' intensity={3} position={[0, 1, 0]} />

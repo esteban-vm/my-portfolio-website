@@ -4,7 +4,7 @@ import { Html, useProgress } from '@react-three/drei'
 import { useLocale } from 'next-intl'
 import { PacmanLoader } from 'react-spinners'
 
-export function ModelLoader() {
+export function SceneLoader() {
   const locale = useLocale()
   const { progress } = useProgress()
   const percent = (progress / 100).toLocaleString(locale, { style: 'percent' })
