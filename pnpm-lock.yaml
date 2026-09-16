@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@emailjs/nodejs':
+        specifier: ^5.0.2
+        version: 5.0.2
       '@react-three/drei':
         specifier: ^10.7.8
         version: 10.7.8(@react-three/fiber@9.7.0(@types/react@19.2.18)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(three@0.185.1))(@types/react@19.2.18)(@types/three@0.185.4)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)(three@0.185.1)
@@ -175,6 +178,10 @@ packages:
 
   '@eloqnt/format-po@0.0.3':
     resolution: {integrity: sha512-4r36qEd7KJFV+IMKUv5czNXbGVys8ahxlQKWoUDV20eGl4Oxr+YZ2O5IEQU09S+d7FvPJ1USnyc/wtCLNCo1Ng==}
+
+  '@emailjs/nodejs@5.0.2':
+    resolution: {integrity: sha512-+BrO5rF0msaoEeSKxoa64weUkczd3fTXRCB8/EnKaIRzC8B1EyLDZfr9vYK5TNG/U3Eco9cpjMNnA1IlUBkmOw==}
+    engines: {node: '>=18.0.0'}
 
   '@emnapi/runtime@1.11.3':
     resolution: {integrity: sha512-Xz4Tpyki7XyrpbUK1jR1AhdAdaXyhhY4lZ3neLodmhpuWfy2PAQN5B46sAiU4liOXGLkHypn/qU+jvfWSCYYLA==}
@@ -1368,6 +1375,8 @@ snapshots:
     dependencies:
       '@eloqnt/config': 0.0.2
       po-parser: 2.2.0
+
+  '@emailjs/nodejs@5.0.2': {}
 
   '@emnapi/runtime@1.11.3':
     dependencies:
