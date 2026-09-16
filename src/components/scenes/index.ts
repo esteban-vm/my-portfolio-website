@@ -1,1 +1,1 @@
-export * from './home.scene'
+export * from './home-scene'
