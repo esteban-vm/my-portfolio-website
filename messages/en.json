@@ -65,6 +65,11 @@
         "max": "Enter at most 255 characters"
       }
     },
+    "placeholders": {
+      "name": "John Doe",
+      "email": "john_doe@example.com",
+      "message": "Your message…"
+    },
     "button": "Send Message"
   }
 }

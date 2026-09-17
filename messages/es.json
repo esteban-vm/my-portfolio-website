@@ -46,7 +46,7 @@
     }
   },
   "ContactForm": {
-    "legend": "Ponte en contacto",
+    "legend": "Contactemos",
     "labels": {
       "name": "Nombre",
       "email": "Correo electrónico",
@@ -64,6 +64,11 @@
         "min": "Ingresa al menos 5 caracteres",
         "max": "Ingresa como máximo 255 caracteres"
       }
+    },
+    "placeholders": {
+      "name": "Juan Pérez",
+      "email": "juan_perez@ejemplo.com",
+      "message": "Tu mensaje…"
     },
     "button": "Enviar mensaje"
   }
