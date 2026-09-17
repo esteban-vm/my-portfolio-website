@@ -44,5 +44,27 @@
       "text": "Need a project done or looking for a web developer? I'm just a few keystrokes away.",
       "linkText": "Let's talk!"
     }
+  },
+  "ContactForm": {
+    "legend": "Get in touch",
+    "labels": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message"
+    },
+    "errors": {
+      "name": {
+        "nonempty": "Name must not be empty",
+        "min": "Enter at least 5 characters",
+        "max": "Enter at most 50 characters"
+      },
+      "email": "Email must be valid",
+      "message": {
+        "nonempty": "Message must not be empty",
+        "min": "Enter at least 5 characters",
+        "max": "Enter at most 255 characters"
+      }
+    },
+    "button": "Send Message"
   }
 }

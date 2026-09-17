@@ -44,5 +44,27 @@
       "text": "¿Tienes un proyecto en mente o buscas un desarrollador web? Estoy a sólo unos clicks.",
       "linkText": "¡Hablemos!"
     }
+  },
+  "ContactForm": {
+    "legend": "Ponte en contacto",
+    "labels": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "message": "Mensaje"
+    },
+    "errors": {
+      "name": {
+        "nonempty": "El nombre no puede estar vacío",
+        "min": "Ingresa al menos 5 caracteres",
+        "max": "Ingresa como máximo 50 caracteres"
+      },
+      "email": "El correo electrónico debe ser válido",
+      "message": {
+        "nonempty": "El mensaje no puede estar vacío",
+        "min": "Ingresa al menos 5 caracteres",
+        "max": "Ingresa como máximo 255 caracteres"
+      }
+    },
+    "button": "Enviar mensaje"
   }
 }
