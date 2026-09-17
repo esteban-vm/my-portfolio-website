@@ -5,25 +5,15 @@ import { z } from 'zod'
 import { sendEmail } from '@/actions'
 
 export function useContactForm() {
-  const t = useTranslations('ContactForm')
+  const t = useTranslations('ContactForm.errors')
 
   return useHookFormAction(
     sendEmail,
     zodResolver(
       z.object({
-        name: z
-          .string()
-          .trim()
-          .nonempty(t('errors.name.nonempty'))
-          .min(5, t('errors.name.min'))
-          .max(50, t('errors.name.max')),
-        email: z.email(t('errors.email')).trim().lowercase(),
-        message: z
-          .string()
-          .trim()
-          .nonempty(t('errors.message.nonempty'))
-          .min(5, t('errors.message.min'))
-          .max(255, t('errors.message.max')),
+        name: z.string().trim().nonempty(t('name.nonempty')).min(5, t('name.min')).max(50, t('name.max')),
+        email: z.email(t('email')).trim().lowercase(),
+        message: z.string().trim().nonempty(t('message.nonempty')).min(5, t('message.min')).max(255, t('message.max')),
       })
     ),
     {
