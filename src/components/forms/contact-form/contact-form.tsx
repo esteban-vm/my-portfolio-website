@@ -21,7 +21,13 @@ export function ContactForm() {
         <$.Legend>{t('legend')}</$.Legend>
         <$.Label>
           {t('labels.name')}:
-          <$.Input placeholder={t('placeholders.name')} type='text' {...register('name')} />
+          <$.Input
+            maxLength={50}
+            minLength={5}
+            placeholder={t('placeholders.name')}
+            type='text'
+            {...register('name')}
+          />
           <$.Small>{errors.name?.message}</$.Small>
         </$.Label>
         <$.Label>
@@ -31,7 +37,7 @@ export function ContactForm() {
         </$.Label>
         <$.Label>
           {t('labels.message')}:
-          <$.Textarea placeholder={t('placeholders.message')} {...register('message')} />
+          <$.Textarea maxLength={255} minLength={5} placeholder={t('placeholders.message')} {...register('message')} />
           <$.Small>{errors.message?.message}</$.Small>
         </$.Label>
         <$.Button type='submit'>{t('button')}</$.Button>
