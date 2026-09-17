@@ -66,8 +66,8 @@
       }
     },
     "placeholders": {
-      "name": "Juan Pérez",
-      "email": "juan_perez@ejemplo.com",
+      "name": "Tu nombre…",
+      "email": "tu_correo@ejemplo.com",
       "message": "Tu mensaje…"
     },
     "button": "Enviar mensaje"
