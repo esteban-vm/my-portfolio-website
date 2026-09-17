@@ -10,14 +10,14 @@ export function ContactForm() {
   const {
     form: {
       register,
-      formState: { disabled, errors },
+      formState: { isSubmitting, errors },
     },
     handleSubmitWithAction,
   } = useContactForm()
 
   return (
     <$.Wrapper noValidate onSubmit={handleSubmitWithAction}>
-      <$.Fieldset disabled={disabled}>
+      <$.Fieldset disabled={isSubmitting}>
         <$.Legend>{t('legend')}</$.Legend>
         <$.Label>
           {t('labels.name')}:
