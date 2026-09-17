@@ -1,25 +1,40 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
+import { useContactForm } from '@/hooks'
 import * as $ from './contact-form.styled'
 
 export function ContactForm() {
+  const t = useTranslations('ContactForm')
+
+  const {
+    form: {
+      register,
+      formState: { disabled, errors },
+    },
+    handleSubmitWithAction,
+  } = useContactForm()
+
   return (
-    <$.Wrapper>
-      <$.Fieldset>
-        <$.Legend>Get in touch</$.Legend>
+    <$.Wrapper noValidate onSubmit={handleSubmitWithAction}>
+      <$.Fieldset disabled={disabled}>
+        <$.Legend>{t('legend')}</$.Legend>
         <$.Label>
-          Name:
-          <$.Input type='text' />
+          {t('labels.name')}:
+          <$.Input placeholder={t('placeholders.name')} type='text' {...register('name')} />
+          <$.Small>{errors.name?.message}</$.Small>
         </$.Label>
         <$.Label>
-          Email:
-          <$.Input type='email' />
+          {t('labels.email')}:
+          <$.Input placeholder={t('placeholders.email')} type='email' {...register('email')} />
+          <$.Small>{errors.email?.message}</$.Small>
         </$.Label>
         <$.Label>
-          Message:
-          <$.Textarea spellCheck={false} />
+          {t('labels.message')}:
+          <$.Textarea placeholder={t('placeholders.message')} {...register('message')} />
+          <$.Small>{errors.message?.message}</$.Small>
         </$.Label>
-        <$.Button type='button'>Send Message</$.Button>
+        <$.Button type='submit'>{t('button')}</$.Button>
       </$.Fieldset>
     </$.Wrapper>
   )
